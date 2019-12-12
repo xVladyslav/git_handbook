@@ -7,7 +7,7 @@
 #### [Part 2 Basics & bash commands](#part2)
 ##### 1. [folders](#folders)
 ##### 2. [basics](#basics)
-##### 3. [merging](#merging)
+##### 3. [merging](#Merging branches)
 ##### 3. [inspect a repo.](#logs)
 
 ***
@@ -96,7 +96,7 @@
 
 ***
 
-##### 3. Merging branches ##### {#merging}
+##### 3. Merging branches
 `git merge *what to [+additional]*`
 ##### Example:
 ###### go to 'develop' branch 
