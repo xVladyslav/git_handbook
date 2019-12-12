@@ -7,7 +7,7 @@
 #### [Part 2 Basics & bash commands](#part2)
 ##### 1. [folders](#folders)
 ##### 2. [basics](#basics)
-##### 3. [merging](#merging)
+##### 3. [merging](merging)
 ##### 3. [inspect a repo.](#logs)
 
 ***
