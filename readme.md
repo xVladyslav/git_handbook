@@ -1,5 +1,5 @@
 #### Navigation:
-#### [Part 1 Preparations](#part1)
+#### [Part 1 Preparations]{#part1}
 ##### 1. [get git](#getgit)
 ##### 2. [setup git](#setup)
 ##### 3. [generate ssh](#ssh)
@@ -7,7 +7,7 @@
 #### [Part 2 Basics & bash commands](#part2)
 ##### 1. [folders](#folders)
 ##### 2. [basics](#basics)
-##### 3. [merging](#merging)
+##### 3. [merging]{#merging}
 ##### 3. [inspect a repo.](#logs)
 
 ***
