@@ -95,7 +95,7 @@
 `git push --set-upstream origin develop`
 
 ***
-{#merging}
+[merging] {#merging}
 ##### 3. Merging branches
 `git merge *what to [+additional]*`
 ##### Example:
