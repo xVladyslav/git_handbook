@@ -2,7 +2,7 @@ part 1 --------------------------------
 
 1) http://git-scm.com/download/win
 
-2) `git config --global user.name "Vladyslav Filippov"`
+2) `git config --global user.name "Vladyslav Filippov"`\n
    git config --global user.email ******@****.com 
    
    Set a core editor 												
