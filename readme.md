@@ -12,13 +12,13 @@
 
 ***
 
-### Part 1 Preparations {#part1}
+### Part 1 Preparations 
 
-##### 1. [here you can find and download Git](http://git-scm.com/download/) {#getgit}
+##### 1. [here you can find and download Git](http://git-scm.com/download/) 
 
 ***
 
-##### 2. Setup git: change your global configs {#setup}
+##### 2. Setup git: change your global configs 
 ###### user name:
 `git config --global user.name "Vladyslav Filippov"`
 ###### email:
@@ -30,13 +30,13 @@
 ###### check config:
 `git config --list`  
 ***
-##### 3. Generate ssh-key {#ssh}
+##### 3. Generate ssh-key 
 ###### without RSA
 `ssh-keygen -t ed25519 -C "email@example.com"`
 ###### with RSA:
 `ssh-keygen -t rsa -b 4096 -C "email@example.com"`
 ***
-##### 4. Gitignore {#gitignore}
+##### 4. Gitignore 
 ###### create the file
 `touch .gitignore`
 
@@ -50,16 +50,16 @@
 ###### ignore all .pdf files in the doc/ directory
 `doc/**/*.pdf`
 ***
-### Part 2 Basics & bash commands {#part2}
+### Part 2 Basics & bash commands 
 
-##### 1. Folders {#folders}
+##### 1. Folders 
 ###### Create a folder
 `mkdir git_handbook`
 
 ###### Go to this folder
 `cd git_handbook`
 ***
-##### 2. Git basics {#basics}
+##### 2. Git basics 
 ###### Initialize a git repository
 `git init`
 
@@ -112,7 +112,7 @@
 
 ***
 
-##### 4. inspect your repository {#logs}
+##### 4. inspect your repository
 `git log`
 
 `git reflog`
