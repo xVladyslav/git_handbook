@@ -1,137 +1,120 @@
-part 1 --------------------------------
+#### Navigation:
+#### [Part 1 Preparations](#part1)
+##### 1. [get git](#getgit)
+##### 2. [setup git](#setup)
+##### 3. [generate ssh](#ssh)
+##### 3. [gitignore](#gitignore)
+#### [Part 2 Basics & bash commands](#part2)
+##### 1. [folders](#folders)
+##### 2. [basics](#basics)
+##### 3. [merging](#merging)
+##### 3. [inspect a repo.](#logs)
 
-1) http://git-scm.com/download/win
+***
 
-2) git config --global user.name "Vladyslav Filippov"
-   git config --global user.email ******@****.com 
-   
-   Set a core editor 												
-   git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin" 
-   
-   check config
-   git config --list  
+### Part 1 Preparations {#part1}
 
-3) 
+##### 1. [here you can find and download Git](http://git-scm.com/download/) {#getgit}
 
-4) ssh-keygen -t ed25519 -C "email@example.com"
-   
-   or with RSA
-   ssh-keygen -t rsa -b 4096 -C "email@example.com"
+***
 
-5) $ touch .gitignore
+##### 2. Setup git: change your global configs {#setup}
+###### user name:
+`git config --global user.name "Vladyslav Filippov"`
+###### email:
+`git config --global user.email ******@****.com` 
 
-//// # no .a files
-*.a
-# but do track lib.a, even though you're ignoring .a files above
-!lib.a
-# ignore all files in the build/ directory
-build/
-# ignore all .pdf files in the doc/ directory
-doc/**/*.pdf
-///
+###### set a core editor 												
+`git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"` 
 
-part 2 -------------------------------------
+###### check config:
+`git config --list`  
+***
+##### 3. Generate ssh-key {#ssh}
+###### without RSA
+`ssh-keygen -t ed25519 -C "email@example.com"`
+###### with RSA:
+`ssh-keygen -t rsa -b 4096 -C "email@example.com"`
+***
+##### 4. Gitignore {#gitignore}
+###### create the file
+`touch .gitignore`
 
+###### add '.gitignore' to .gitignore file 
+###### no .a files
+`.a`
+###### but do track lib.a, even though you're ignoring .a files above
+`!lib.a`
+###### ignore all files in the build/ directory
+`build/`
+###### ignore all .pdf files in the doc/ directory
+`doc/**/*.pdf`
+***
+### Part 2 Basics & bash commands {#part2}
 
-1) $ mkdir git_handbook
+##### 1. Folders {#folders}
+###### Create a folder
+`mkdir git_handbook`
 
-$ cd git_handbook
+###### Go to this folder
+`cd git_handbook`
+***
+##### 2. Git basics {#basics}
+###### Initialize a git repository
+`git init`
 
-$ git init
+###### set a remote repository where to push 
+`git remote add origin https://github.com/xVladyslav/git_handbook.git`
 
-2) $ git remote add origin https://github.com/xVladyslav/git_handbook.git
+###### push your local repo. into remote repo.
+`git push -u origin master`
 
-   $ git push -u origin master
-	
-	input your username and password
+###### create readme file 
+`touch readme.md`
 
+###### stage your changes
+`git add . `
 
+###### make a commit
+`git commit -m "initial commit"`
 
+###### create new 'develop' branch
+`git branch develop`
 
-$ git push -u origin master
-Enumerating objects: 3, done.
-Counting objects: 100% (3/3), done.
-Writing objects: 100% (3/3), 233 bytes | 233.00 KiB/s, done.
-Total 3 (delta 0), reused 0 (delta 0)
-To https://github.com/xVladyslav/git_handbook.git
- * [new branch]      master -> master
-Branch 'master' set up to track remote branch 'master' from 'origin'.
+###### go to this branch
+`git checkout develop`
 
+###### creating an index.html file in 'developer' branch
+`touch index.html`
 
+###### commiting into 'develop' branch
+`git add . `
 
-3) $ touch readme.md
+`git commit -m "develop branch changed"`
 
-4) $ git add .
+`git push --set-upstream origin develop`
 
-   $ git commit -m "initial commit"
-[master (root-commit) 944db19] initial commit
- 1 file changed, 1 insertion(+)
- create mode 100644 readme.md
+***
 
-5) $ git branch develop
+##### 3. Merging branches {#merging}
+`git merge *what to [+additional]*`
+##### Example:
+###### go to 'develop' branch 
+`git checkout develop`
+###### merging branches into 'develop'
+`git merge images styles`
 
-$ git checkout develop
-Switched to branch 'develop'
+`git add . `
 
-6) 
-$ touch index.html
+`git commit -m "merging images and styles in develop"`
 
-$ git add .
+`git push`
 
-$ git commit -m "develop branch changed"
-[develop 2a25384] develop branch changed
- 1 file changed, 2 insertions(+), 1 deletion(-)
+***
 
-$ git push --set-upstream origin develop
+##### 4. inspect your repository {#logs}
+`git log`
 
+`git reflog`
 
-13) 
-
-$ git checkout develop
-Switched to branch 'develop'
-Your branch is up to date with 'origin/develop'.
-
-Vladyslav_Filippov@EPUAKHAW008A MINGW64 ~/Projects/git_practise1 (develop)
-$ git merge styles images
-Fast-forwarding to: styles
-Trying simple merge with images
-Simple merge did not work, trying automatic merge.
-Auto-merging index.html
-ERROR: content conflict in index.html
-fatal: merge program failed
-Automatic merge failed; fix conflicts and then commit the result.
-
-Vladyslav_Filippov@EPUAKHAW008A MINGW64 ~/Projects/git_practise1 (develop|MERGING)
-$ git add .
-warning: LF will be replaced by CRLF in index.html.
-The file will have its original line endings in your working directory
-
-Vladyslav_Filippov@EPUAKHAW008A MINGW64 ~/Projects/git_practise1 (develop|MERGING)
-$ git add .
-
-Vladyslav_Filippov@EPUAKHAW008A MINGW64 ~/Projects/git_practise1 (develop|MERGING)
-$ git commit -m "merging images and styles in develop"
-[develop 0160a72] merging images and styles in develop
-
-Vladyslav_Filippov@EPUAKHAW008A MINGW64 ~/Projects/git_practise1 (develop)
-$ git push
-Enumerating objects: 7, done.
-Counting objects: 100% (7/7), done.
-Delta compression using up to 12 threads
-Compressing objects: 100% (3/3), done.
-Writing objects: 100% (3/3), 490 bytes | 490.00 KiB/s, done.
-Total 3 (delta 1), reused 0 (delta 0)
-remote:
-remote: To create a merge request for develop, visit:
-remote:   https://git.epam.com/vladyslav_filippov/git_practise1/merge_requests/new?merge_request%5Bsource_branch%5D=develop
-remote:
-To https://git.epam.com/vladyslav_filippov/git_practise1.git
-   f8dbef1..0160a72  develop -> develop
-
-
-
-part 3 ----------------------------
-## inspect your repository
-$ git log
-
-$ git reflog
+***
