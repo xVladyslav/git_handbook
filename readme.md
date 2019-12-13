@@ -177,6 +177,8 @@
 
 `git reset --mixed`
 
+![Image of Yaktocat](https://github.com/xVladyslav/git_handbook/blob/master/img/Picture1.png)
+
 ###### local branch
 `git reset HEAD^^ (HEAD~2)`
 
