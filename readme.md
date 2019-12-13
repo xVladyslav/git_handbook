@@ -77,6 +77,12 @@
 
 ###### make a commit
 `git commit -m "initial commit"`
+
+###### get a version of repo from remote server
+`git pull`
+
+###### clone a repo from remote server
+`git clone <https or ssh path>`
 ***
 ##### Branching
 ###### create new 'develop' branch
