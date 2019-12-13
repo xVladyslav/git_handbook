@@ -77,13 +77,14 @@
 
 ###### make a commit
 `git commit -m "initial commit"`
-
+***
+##### Branching
 ###### create new 'develop' branch
 `git branch develop`
 
 ###### go to this branch
 `git checkout develop`
-
+***
 ###### creating an index.html file in 'developer' branch
 `touch index.html`
 
@@ -112,9 +113,76 @@
 
 ***
 
-##### 4. inspect your repository
+##### 4. Inspect your repository
 `git log`
 
 `git reflog`
 
 ***
+##### 5. Amend
+###### use 
+`git commit --amend` 
+###### to change your latest log message.
+
+###### use 
+`git commit --amend`
+###### to make modifications to the most recent commit. 
+
+***
+
+#### Part 4 Rebasing
+##### 1. rebase 
+
+###### for rebasing use
+`git rebase develop`
+
+###### for interactive rebasing use
+`git rebase develop -i`
+###### to continue rebasing
+`git rebase --continue`
+###### to abort rebasing
+`git rebase --abort`
+
+***
+#### Part 5 Conflicts solving
+###### abort merge
+`git merge --abort`
+
+###### resolve by selecting version
+`git checkout --Xours --Xtheirs`
+
+##### resolve manually:
+###### show changes between commits, commit and working tree, etc
+`git diff`
+
+###### undo merge
+`git revert 09fe472`
+
+***
+
+#### Part 6 Undoing changes
+###### working directory
+`git checkout -- file.txt`
+
+`git checkout . `
+
+`git clean -xdf`
+
+###### staging area (Index)
+`git reset -- file.txt`
+
+`git reset --hard`
+
+`git reset --soft`
+
+`git reset --mixed`
+
+###### local branch
+`git reset HEAD^^ (HEAD~2)`
+
+`git commit --amend -m “commit message”` 
+
+###### Remote repository
+`git revert <sha1>`
+
+	
