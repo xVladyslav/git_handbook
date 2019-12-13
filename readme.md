@@ -177,14 +177,36 @@
 
 `git reset --mixed`
 
-![Image of Yaktocat](https://github.com/xVladyslav/git_handbook/blob/master/img/Picture1.png)
+![git reset explained](https://github.com/xVladyslav/git_handbook/blob/master/img/Picture1.png)
 
 ###### local branch
 `git reset HEAD^^ (HEAD~2)`
 
 `git commit --amend -m “commit message”` 
 
-###### Remote repository
+###### remote repository
 `git revert <sha1>`
+
+***
+#### Stash
+###### stash the changes in a dirty working directory away
+`git-stash`
+###### the same as
+`git stash save [message]` 
+
+###### list the stashes that you currently have. 
+
+`git stash list`
+
+###### list the stashes that you currently have. 
+
+`git stash pop`
+
+###### remove all the stashed states
+
+`git stash clear`
+
+
+
 
 	
