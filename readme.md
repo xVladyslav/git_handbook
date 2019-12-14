@@ -196,7 +196,7 @@
 ***
 #### Stash
 ###### stash the changes in a dirty working directory away
-`git-stash`
+`git stash`
 ###### the same as
 `git stash save [message]` 
 
