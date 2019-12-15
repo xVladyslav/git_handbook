@@ -54,6 +54,8 @@
 
 ###### push your local repo. into remote repo.
 `git push -u origin master`
+###### or
+`git push --all origin`
 
 ###### create readme file 
 `touch readme.md`
