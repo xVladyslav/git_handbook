@@ -1,17 +1,3 @@
-#### Navigation:
-#### [Part 1 Preparations](#part-1-preparations-1)
-##### 1. [get git](#1-here-you-can-find-and-download-git)
-##### 2. [setup git](#2-setup-git-change-your-global-configs)
-##### 3. [generate ssh](#3-generate-ssh-key)
-##### 3. [gitignore](#4-gitignore)
-#### [Part 2 Basics & bash commands](#part-2-basics--bash-commands-1)
-##### 1. [folders](#1-folders-1)
-##### 2. [basics](#2-git-basics)
-##### 3. [merging](#3-merging-branches)
-##### 3. [inspect a repo.](#4-inspect-your-repository)
-
-***
-
 ### Part 1 Preparations 
 
 ##### 1. [here you can find and download Git](http://git-scm.com/download/) 
